@@ -15,7 +15,6 @@ const Projetos: React.FC = () => {
             techs: ["Next.js", "Node", "Prisma", "Stripe"],
             url: "https://exemplo2.com"
         },
-        // Adicione mais projetos conforme necessário
     ];
 
     return (

@@ -2,13 +2,12 @@ import React from 'react';
 
 const Sobre: React.FC = () => {
     return (
-        <section id="sobre" className="mb-12">
+        <section id="sobre" className="mb-12 p-8 bg-neutral-800 text-white rounded-lg shadow-lg">
             <h2 className="text-3xl font-semibold mb-4">Sobre mim</h2>
 
             {/* Seção da Foto */}
             <div className="flex items-center space-x-6 mb-6">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden">
-                    {/* Adicionando a foto */}
                     <img
                         src="public/daniel.jpeg" // Caminho da imagem na pasta public
                         alt="Foto de Daniel Gomes de Paula"

@@ -11,9 +11,6 @@ const App: React.FC = () => {
       {/* Página Home */}
       <Home />
 
-      {/* Página Sobre */}
-      <Sobre />
-
       {/* Página Salesforce */}
       <Salesforce />
 
