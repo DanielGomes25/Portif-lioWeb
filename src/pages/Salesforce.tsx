@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SalesforceSection: React.FC = () => {
+const Salesforce: React.FC = () => {
     return (
         <section id="salesforce" className="mb-12 bg-blue-100 p-6 rounded-xl shadow-lg">
             <h2 className="text-3xl font-semibold text-blue-800 mb-4">Salesforce</h2>
@@ -12,4 +12,4 @@ const SalesforceSection: React.FC = () => {
     );
 };
 
-export default SalesforceSection;
+export default Salesforce;
