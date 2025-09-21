@@ -1,13 +1,18 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Home from '../src/pages/Home';
-import Sobre from '../src/pages/Sobre';
 import Projetos from '../src/pages/Projetos';
 import Salesforce from '../src/pages/Salesforce';
 import Contato from '../src/pages/Contato';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="min-h-screen bg-gray-100"
+    >
       {/* Página Home */}
       <Home />
 
@@ -19,7 +24,8 @@ const App: React.FC = () => {
 
       {/* Página Contato */}
       <Contato />
-    </div>
+    </motion.div>
+
   );
 };
 
