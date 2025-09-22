@@ -1,28 +1,55 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } 
+import type { LucideIcon } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react'; // Ícones do Lucide
+
+const Contato: React.FC = () => {
+    type ContactInfo = {
+        href: string;
+        label: string;
+        Icon: LucideIcon;
+        description: string;
+    };
+
+    const contacts: ContactInfo[] = [
+
 import { Github, Linkedin, Mail, Phone } from 'lucide-react'; // Ícones do Lucide
 
 const Contato: React.FC = () => {
     const contacts = [
+
         {
             href: 'https://www.linkedin.com/in/daniel-gomes-de-paula/',
             label: 'LinkedIn',
             Icon: Linkedin,
+
+            description:
+                'Detalhes das minhas experiências em Salesforce, projetos Agentforce e conquistas profissionais recentes.',
+
         },
         {
             href: 'https://wa.me/5511975526549',
             label: 'WhatsApp',
             Icon: Phone,
+
+            description: 'Converse comigo diretamente sobre oportunidades, freelas ou dúvidas rápidas.',
+
         },
         {
             href: 'mailto:daniel.gomes.9@hotmail.com',
             label: 'Email',
             Icon: Mail,
+
+            description: 'Envie uma mensagem detalhada para falarmos sobre projetos e colaborações.',
+
         },
         {
             href: 'https://github.com/DanielGomes25',
             label: 'GitHub',
             Icon: Github,
+
+            description: 'Acompanhe meus repositórios, estudos e contribuições open source.',
+
         },
     ];
 
@@ -41,12 +68,17 @@ const Contato: React.FC = () => {
             </p>
 
             <div className="mt-10 flex flex-col gap-5">
-                {contacts.map(({ href, label, Icon }) => (
+
+                {contacts.map(({ href, label, Icon, description }) => (
+
                     <motion.a
                         key={label}
                         href={href}
                         target="_blank"
                         rel="noreferrer"
+
+                        aria-label={`Abrir ${label} de Daniel Gomes de Paula`}
+
                         className="group inline-flex items-center gap-4 rounded-2xl border border-blue-800/20 bg-blue-950/20 px-5 py-4 text-slate-200 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-900/30"
                         whileHover={{ x: 6 }}
                         whileTap={{ scale: 0.98 }}
@@ -56,7 +88,9 @@ const Contato: React.FC = () => {
                         </span>
                         <div>
                             <p className="text-base font-semibold text-blue-100 group-hover:text-blue-200">{label}</p>
-                            <p className="text-sm text-slate-300/80">Clique para abrir em uma nova aba</p>
+
+                            <p className="text-sm text-slate-300/80">{description}</p>
+
                         </div>
                     </motion.a>
                 ))}

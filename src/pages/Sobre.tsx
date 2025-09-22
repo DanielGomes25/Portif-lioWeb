@@ -7,11 +7,12 @@ const Sobre: React.FC = () => {
 
             {/* Seção da Foto */}
             <div className="flex items-center space-x-6 mb-6">
-                <div className="relative w-32 h-32 rounded-full overflow-hidden">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-blue-900/60 shadow-[0_15px_35px_-20px_rgba(59,130,246,0.75)]">
                     <img
-                        src="public/daniel.jpeg" // Caminho da imagem na pasta public
+                        src="/daniel.jpeg"
                         alt="Foto de Daniel Gomes de Paula"
-                        className="object-cover w-full h-full"
+                        className="h-full w-full object-cover"
+                        loading="lazy"
                     />
                 </div>
 
