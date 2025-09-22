@@ -19,13 +19,14 @@ const Home: React.FC = () => {
                 Aqui você encontra meus projetos, certificações e experiências em tecnologia,
                 com foco em soluções Salesforce e desenvolvimento web moderno.
             </p>
-            <motion.button
+            <motion.a
+                href="#sobre"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-8 py-3 font-semibold text-slate-100 shadow-[0_20px_45px_-20px_rgba(59,130,246,0.9)] transition-colors hover:from-blue-600 hover:to-blue-400"
             >
                 Saiba mais
-            </motion.button>
+            </motion.a>
         </motion.section>
     );
 }

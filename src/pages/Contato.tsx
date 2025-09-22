@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } 
+import { motion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react'; // Ícones do Lucide
 
@@ -12,11 +12,6 @@ const Contato: React.FC = () => {
     };
 
     const contacts: ContactInfo[] = [
-
-import { Github, Linkedin, Mail, Phone } from 'lucide-react'; // Ícones do Lucide
-
-const Contato: React.FC = () => {
-    const contacts = [
 
         {
             href: 'https://www.linkedin.com/in/daniel-gomes-de-paula/',
