@@ -3,18 +3,30 @@ import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="text-center p-8 bg-white rounded-lg shadow-lg my-8 mx-4"
+        <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="mx-auto w-full max-w-3xl rounded-3xl border border-blue-800/40 bg-slate-950/70 p-12 text-center shadow-[0_35px_60px_-30px_rgba(30,64,175,0.75)] backdrop-blur"
         >
-            <h1 className="text-3xl font-bold text-green-500">Bem-vindo ao meu Portfólio</h1>
-            <p className="mt-4 text-gray-700">Aqui você encontrará todos os meus projetos e informações de contato.</p>
-            <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-700 transition">
+            <p className="text-sm uppercase tracking-[0.3em] text-blue-400/80">Portfólio</p>
+            <h1 className="mt-4 text-4xl font-bold leading-snug text-blue-100 sm:text-5xl">
+                Bem-vindo ao meu universo em
+                <span className="block text-blue-400">tecnologia e inovação</span>
+            </h1>
+            <p className="mt-6 text-lg text-slate-300">
+                Aqui você encontra meus projetos, certificações e experiências em tecnologia,
+                com foco em soluções Salesforce e desenvolvimento web moderno.
+            </p>
+            <motion.button
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-8 py-3 font-semibold text-slate-100 shadow-[0_20px_45px_-20px_rgba(59,130,246,0.9)] transition-colors hover:from-blue-600 hover:to-blue-400"
+            >
                 Saiba mais
-            </button>
-        </motion.div>
+            </motion.button>
+        </motion.section>
     );
 }
 
