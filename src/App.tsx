@@ -11,19 +11,21 @@ const App: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="min-h-screen bg-gray-100"
+      className="min-h-screen overflow-x-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-slate-100"
     >
-      {/* Página Home */}
-      <Home />
+      <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-20 px-6 py-16">
+        {/* Página Home */}
+        <Home />
 
-      {/* Página Salesforce */}
-      <Salesforce />
+        {/* Página Salesforce */}
+        <Salesforce />
 
-      {/* Página Projetos */}
-      <Projetos />
+        {/* Página Projetos */}
+        <Projetos />
 
-      {/* Página Contato */}
-      <Contato />
+        {/* Página Contato */}
+        <Contato />
+      </div>
     </motion.div>
 
   );
