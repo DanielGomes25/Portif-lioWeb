@@ -25,14 +25,13 @@ const Projetos: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
-            className="rounded-3xl border border-blue-800/30 bg-slate-950/60 p-10 shadow-[0_55px_110px_-65px_rgba(59,130,246,0.85)] backdrop-blur"
+            className="p-2"
         >
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
                 <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-blue-400/70">Projetos em destaque</p>
-                    <h2 className="mt-2 text-4xl font-semibold text-blue-100">Projetos</h2>
+                    <p className="text-xs uppercase tracking-[0.35em] text-slate-500">Projetos em destaque</p>
+                    <h2 className="mt-2 text-4xl font-semibold text-slate-900">Projetos</h2>
                 </div>
-                <span className="text-sm text-slate-300/80">Explorando desafios reais com tecnologia moderna</span>
             </div>
             <motion.div
                 initial="hidden"

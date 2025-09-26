@@ -55,10 +55,10 @@ const Contato: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            className="rounded-3xl border border-blue-800/30 bg-slate-950/60 p-10 shadow-[0_45px_95px_-55px_rgba(59,130,246,0.8)] backdrop-blur"
+            className="p-2"
         >
-            <h2 className="text-4xl font-semibold text-blue-100">Contato</h2>
-            <p className="mt-4 max-w-2xl text-slate-300">
+            <h2 className="text-4xl font-semibold text-white">Contato</h2>
+            <p className="mt-4 max-w-2xl text-slate-100/90">
                 Vamos conversar! Estou disponível para oportunidades, parcerias e para compartilhar ideias sobre tecnologia e Salesforce.
             </p>
 
@@ -74,17 +74,17 @@ const Contato: React.FC = () => {
 
                         aria-label={`Abrir ${label} de Daniel Gomes de Paula`}
 
-                        className="group inline-flex items-center gap-4 rounded-2xl border border-blue-800/20 bg-blue-950/20 px-5 py-4 text-slate-200 transition-all duration-300 hover:border-blue-500/50 hover:bg-blue-900/30"
-                        whileHover={{ x: 6 }}
+                        className="group flex items-center gap-4 rounded-full ring-1 ring-white/15 bg-white/5 px-5 py-3 text-slate-100/90 transition-all duration-300 hover:ring-white/30 hover:bg-white/10"
+                        whileHover={{ x: 4 }}
                         whileTap={{ scale: 0.98 }}
                     >
-                        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-900/60 text-blue-300 shadow-[0_10px_25px_-15px_rgba(59,130,246,0.8)] transition-colors group-hover:text-blue-200">
+                        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white/90 ring-1 ring-white/15 transition-colors group-hover:bg-white/15">
                             <Icon className="h-6 w-6" />
                         </span>
                         <div>
-                            <p className="text-base font-semibold text-blue-100 group-hover:text-blue-200">{label}</p>
+                            <p className="text-base font-semibold text-white">{label}</p>
 
-                            <p className="text-sm text-slate-300/80">{description}</p>
+                            <p className="text-sm text-slate-100/80">{description}</p>
 
                         </div>
                     </motion.a>
