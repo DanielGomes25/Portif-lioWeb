@@ -36,7 +36,7 @@ const Sobre: React.FC = () => {
                 <div className="md:col-start-2 md:justify-self-center w-full max-w-2xl">
                     <div className="rounded-2xl border border-blue-900/30 bg-gradient-to-br from-slate-950 to-blue-950 p-8 shadow-[0_35px_75px_-45px_rgba(30,64,175,0.55)]">
                         <p className="mb-4 text-slate-200">
-                            🚀 Sou desenvolvedor full stack com foco em React, Node.js e TypeScript. Tenho experiência construindo interfaces acessíveis e
+                            🚀 Sou desenvolvedor full stack com conhecimento em React, Node.js, TypeScript e Python. Tenho experiência construindo interfaces acessíveis e
                             APIs escaláveis. Hoje aprofundo conhecimentos no ecossistema Salesforce — com ênfase em Administração, Agentforce e Experience
                             Cloud — aplicando fluxos, automações e modelagem de dados para resolver problemas reais.
                         </p>
@@ -56,7 +56,6 @@ const Sobre: React.FC = () => {
                                 'Node.js',
                                 'TypeScript',
                                 'Python',
-                                'SCRUM',
                                 'Git/GitHub',
                             ].map((skill) => (
                                 <span
