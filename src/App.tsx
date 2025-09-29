@@ -27,8 +27,8 @@ const App: React.FC = () => {
         <Home />
       </Section>
 
-      {/* Sobre - fundo claro */}
-      <Section className="bg-white text-slate-900">
+      {/* Sobre - fundo claro com tom azulado sutil */}
+      <Section className="bg-gradient-to-b from-white via-slate-50 to-blue-50 text-slate-900">
         <Sobre />
       </Section>
 

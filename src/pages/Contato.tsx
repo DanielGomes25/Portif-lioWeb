@@ -57,8 +57,8 @@ const Contato: React.FC = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             className="p-2"
         >
-            <h2 className="text-4xl font-semibold text-white">Contato</h2>
-            <p className="mt-4 max-w-2xl text-slate-100/90">
+            <h2 className="text-4xl font-semibold text-white text-center">Contato</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-slate-100/90 text-center">
                 Vamos conversar! Estou disponível para oportunidades, parcerias e para compartilhar ideias sobre tecnologia e Salesforce.
             </p>
 
@@ -90,6 +90,7 @@ const Contato: React.FC = () => {
                     </motion.a>
                 ))}
             </div>
+            <p className="mt-12 text-center text-sm text-white/60">© {new Date().getFullYear()} Daniel Gomes de Paula</p>
         </motion.section>
     );
 };

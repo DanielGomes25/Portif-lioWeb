@@ -12,7 +12,6 @@ const Sobre: React.FC = () => {
             className="p-2"
         >
             <div className="mb-14 sm:mb-16 text-center">
-                <p className="text-xs uppercase tracking-[0.35em] text-slate-500">Apresentação</p>
                 <h2 className="mt-2 text-4xl font-semibold text-slate-900">Sobre mim</h2>
             </div>
 
@@ -22,12 +21,12 @@ const Sobre: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
-                    className="relative mx-auto md:mx-auto h-52 w-52 overflow-hidden rounded-full ring-4 ring-slate-200 shadow-[0_15px_35px_-20px_rgba(2,6,23,0.25)] md:h-72 md:w-72 lg:h-80 lg:w-80 md:justify-self-center"
+                    className="relative mx-auto md:mx-auto h-52 w-52 size-52 md:h-72 md:w-72 md:size-72 lg:h-80 lg:w-80 lg:size-80 aspect-square overflow-hidden rounded-full ring-4 ring-slate-200 shadow-[0_15px_35px_-20px_rgba(2,6,23,0.25)] md:justify-self-center"
                 >
                     <img
                         src="/daniel.jpeg"
                         alt="Foto de Daniel Gomes de Paula"
-                        className="h-full w-full object-cover"
+                        className="block h-full w-full object-cover"
                         loading="lazy"
                     />
                 </motion.div>
@@ -70,7 +69,7 @@ const Sobre: React.FC = () => {
                         <h3 className="mt-6 text-xl font-semibold text-white">🎯 Objetivo profissional</h3>
                         <p className="text-slate-200">
                             Contribuir em projetos que gerem valor de negócio com qualidade e simplicidade — atuando como dev full stack e evoluindo no
-                            universo Salesforce. Aberto a posições júnior/estágio e freelas.
+                            universo Salesforce.
                         </p>
                     </div>
                 </div>

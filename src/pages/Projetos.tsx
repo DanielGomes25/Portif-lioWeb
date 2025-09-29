@@ -5,17 +5,14 @@ import ProjectCard from '../components/ProjectCard';
 const Projetos: React.FC = () => {
     const projects = [
         {
-            title: "Projeto 1 — SaaS de Tarefas",
-            description: "Aplicação full-stack com autenticação, CRUD e billing.",
-            techs: ["React", "Node.js", "TypeScript", "Stripe"],
-            url: "https://exemplo1.com"
+            title: "Trybe Tunes",
+            description:
+                "App React para buscar álbuns, ouvir prévias, favoritar músicas e editar perfil — tema escuro e layout responsivo.",
+            techs: ["React", "React Router", "CSS", "Vercel"],
+            url: "https://project-tunes.vercel.app/",
+            codeUrl: "https://github.com/DanielGomes25/Project-Tunes",
         },
-        {
-            title: "Projeto 2 — E-commerce Headless",
-            description: "Catálogo de produtos, carrinho de compras e checkout headless.",
-            techs: ["Next.js", "Node", "Prisma", "Stripe"],
-            url: "https://exemplo2.com"
-        },
+        // Você pode adicionar mais projetos abaixo conforme ficarem prontos
     ];
 
     return (
@@ -27,11 +24,8 @@ const Projetos: React.FC = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
             className="p-2"
         >
-            <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
-                <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-slate-500">Projetos em destaque</p>
-                    <h2 className="mt-2 text-4xl font-semibold text-slate-900">Projetos</h2>
-                </div>
+            <div className="mb-10 text-center">
+                <h2 className="mt-2 text-4xl font-semibold text-slate-900">Projetos</h2>
             </div>
             <motion.div
                 initial="hidden"
@@ -59,6 +53,7 @@ const Projetos: React.FC = () => {
                             description={project.description}
                             techs={project.techs}
                             url={project.url}
+                            codeUrl={project.codeUrl}
                         />
                     </motion.div>
                 ))}

@@ -5,15 +5,18 @@ interface ProjectCardProps {
     title: string;
     description: string;
     techs: string[];
-    url: string;
+    /** Link do deploy (backward compat: usa `url` se `liveUrl` não vier) */
+    url?: string;
+    liveUrl?: string;
+    /** Link do código fonte (opcional) */
+    codeUrl?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techs, url }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techs, url, liveUrl, codeUrl }) => {
+    const live = liveUrl ?? url;
+
     return (
-        <motion.a
-            href={url}
-            target="_blank"
-            rel="noreferrer"
+        <motion.div
             className="group block h-full"
             whileHover={{ y: -8 }}
             whileTap={{ scale: 0.99 }}
@@ -34,12 +37,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techs, ur
                     ))}
                 </div>
 
-                <div className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors group-hover:text-blue-300">
-                    Ver Projeto
-                    <span aria-hidden className="translate-x-0 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                <div className="mt-8 flex items-center gap-4">
+                    {live && (
+                        <a
+                            href={live}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
+                            aria-label={`Abrir projeto ${title}`}
+                        >
+                            Ver Projeto
+                            <span aria-hidden className="translate-x-0 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </a>
+                    )}
+                    {codeUrl && (
+                        <a
+                            href={codeUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white"
+                            aria-label={`Ver código do projeto ${title}`}
+                        >
+                            Ver Código
+                            <span aria-hidden className="translate-x-0 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        </a>
+                    )}
                 </div>
             </div>
-        </motion.a>
+        </motion.div>
     );
 };
 

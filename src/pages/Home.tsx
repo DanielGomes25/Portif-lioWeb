@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Home: React.FC = () => {
     return (
 
-        < motion.section
+        <motion.section
             initial={{ opacity: 0, y: 40 }
             }
             whileInView={{ opacity: 1, y: 0 }}
@@ -14,6 +14,9 @@ const Home: React.FC = () => {
         >
 
             <p className="text-sm uppercase tracking-[0.3em] text-white/70">Portfólio</p>
+            <div className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-1 text-white/85 ring-1 ring-white/20 backdrop-blur-sm">
+                <span className="text-sm font-medium">Daniel Gomes de Paula</span>
+            </div>
             <h1 className="mt-4 text-4xl font-bold leading-snug text-white sm:text-5xl">
                 Bem-vindo ao meu espaço de
                 <span className="block text-blue-200">tecnologia e inovação</span>
@@ -30,7 +33,7 @@ const Home: React.FC = () => {
             >
                 Saiba mais
             </motion.a>
-        </motion.section >
+        </motion.section>
 
     );
 }
