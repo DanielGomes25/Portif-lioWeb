@@ -28,6 +28,13 @@ const Projetos: React.FC = () => {
             techs: ["Node.js", "TypeScript", "Fastify", "Prisma", "React", "Postgres"],
             codeUrl: "https://github.com/DanielGomes25/Project-Ride-Booking-System",
         },
+        {
+            title: "Cartão Fono Life",
+            description:
+                "Site institucional em produção desenvolvido para cliente. Código privado; link direciona ao produto em produção.",
+            techs: [],
+            url: "https://www.cartaofonolife.com.br/",
+        },
 
     ];
 
