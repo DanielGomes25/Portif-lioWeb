@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Github, ArrowUpRight } from 'lucide-react';
 
 interface ProjectCardProps {
     title: string;
@@ -42,24 +43,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, techs, ur
                         <a
                             href={live}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 transition-colors hover:text-blue-300"
                             aria-label={`Abrir projeto ${title}`}
                         >
-                            Ver Projeto
-                            <span aria-hidden className="translate-x-0 transition-transform duration-300 group-hover:translate-x-1">→</span>
+                            <span className="inline-flex items-center gap-1.5">
+                                Ver Projeto
+                                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5" />
+                            </span>
                         </a>
                     )}
                     {codeUrl && (
                         <a
                             href={codeUrl}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-white"
                             aria-label={`Ver código do projeto ${title}`}
                         >
+                            <Github className="h-4 w-4" />
                             Ver Código
-                            <span aria-hidden className="translate-x-0 transition-transform duration-300 group-hover:translate-x-1">→</span>
                         </a>
                     )}
                 </div>

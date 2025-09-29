@@ -2,8 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 
+type Project = {
+    title: string;
+    description: string;
+    techs: string[];
+    url?: string; // deploy
+    liveUrl?: string; // alias para deploy
+    codeUrl?: string; // repositório
+};
+
 const Projetos: React.FC = () => {
-    const projects = [
+    const projects: Project[] = [
         {
             title: "Trybe Tunes",
             description:
@@ -12,7 +21,14 @@ const Projetos: React.FC = () => {
             url: "https://project-tunes.vercel.app/",
             codeUrl: "https://github.com/DanielGomes25/Project-Tunes",
         },
-        // Você pode adicionar mais projetos abaixo conforme ficarem prontos
+        {
+            title: "Ride Booking System",
+            description:
+                "Sistema conceito para reservar viagens, escolher motoristas disponíveis e visualizar o histórico de viagens.",
+            techs: ["Node.js", "TypeScript", "Fastify", "Prisma", "React", "Postgres"],
+            codeUrl: "https://github.com/DanielGomes25/Project-Ride-Booking-System",
+        },
+
     ];
 
     return (
