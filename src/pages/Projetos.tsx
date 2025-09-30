@@ -14,15 +14,7 @@ type Project = {
 const Projetos: React.FC = () => {
     const projects: Project[] = [
         {
-            title: "Project Shopping Cart",
-            description:
-                "Aplicação de carrinho de compras com listagem via API do Mercado Livre (fallback mockado), subtotal dinâmico e persistência no localStorage. Busca CEP com Promise.any (AwesomeAPI/BrasilAPI). Foco em TDD (Jest) e E2E (Cypress).",
-            techs: ["HTML", "CSS", "JavaScript", "Vite", "Jest", "Cypress", "ESLint", "Stylelint"],
-            url: "https://project-shopping-cart-sandy.vercel.app/",
-            codeUrl: "https://github.com/DanielGomes25/Project-Shopping-Cart",
-        },
-        {
-            title: "Trybe Tunes",
+            title: "Project Tunes",
             description:
                 "App React para buscar álbuns, ouvir prévias, favoritar músicas e editar perfil — tema escuro e layout responsivo.",
             techs: ["React", "React Router", "CSS", "Vercel"],
@@ -53,6 +45,29 @@ const Projetos: React.FC = () => {
                 "Docker",
             ],
             url: "https://www.cartaofonolife.com.br/",
+        },
+        {
+            title: "Project Shopping Cart",
+            description:
+                "Aplicação de carrinho de compras com listagem via API do Mercado Livre (fallback mockado), subtotal dinâmico e persistência no localStorage. Busca CEP com Promise.any (AwesomeAPI/BrasilAPI). Foco em TDD (Jest) e E2E (Cypress).",
+            techs: ["HTML", "CSS", "JavaScript", "Vite", "Jest", "Cypress", "ESLint", "Stylelint"],
+            url: "https://project-shopping-cart-sandy.vercel.app/",
+            codeUrl: "https://github.com/DanielGomes25/Project-Shopping-Cart",
+        },
+        {
+            title: "Site Institucional — Advogado Marcílio Gomes de Oliveira",
+            description:
+                "Landing page institucional responsiva focada na apresentação de serviços (Previdenciário e Trabalhista) e captação de contatos. Inclui hero com CTA para WhatsApp, áreas de atuação, formulário com EmailJS + reCAPTCHA e botão WhatsApp flutuante.",
+            techs: [
+                "React 19",
+                "Vite 7",
+                "TypeScript 5",
+                "Tailwind CSS 4",
+                "EmailJS",
+                "reCAPTCHA",
+                "ESLint",
+            ],
+            url: "https://www.marciliogoliveira.adv.br/",
         },
 
     ];
