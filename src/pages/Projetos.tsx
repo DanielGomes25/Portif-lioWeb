@@ -14,6 +14,14 @@ type Project = {
 const Projetos: React.FC = () => {
     const projects: Project[] = [
         {
+            title: "Project Shopping Cart",
+            description:
+                "Aplicação de carrinho de compras com listagem via API do Mercado Livre (fallback mockado), subtotal dinâmico e persistência no localStorage. Busca CEP com Promise.any (AwesomeAPI/BrasilAPI). Foco em TDD (Jest) e E2E (Cypress).",
+            techs: ["HTML", "CSS", "JavaScript", "Vite", "Jest", "Cypress", "ESLint", "Stylelint"],
+            url: "https://project-shopping-cart-sandy.vercel.app/",
+            codeUrl: "https://github.com/DanielGomes25/Project-Shopping-Cart",
+        },
+        {
             title: "Trybe Tunes",
             description:
                 "App React para buscar álbuns, ouvir prévias, favoritar músicas e editar perfil — tema escuro e layout responsivo.",
@@ -29,10 +37,21 @@ const Projetos: React.FC = () => {
             codeUrl: "https://github.com/DanielGomes25/Project-Ride-Booking-System",
         },
         {
-            title: "Cartão Fono Life",
+            title: "Fono-Life",
             description:
-                "Site institucional em produção desenvolvido para cliente. Código privado; link direciona ao produto em produção.",
-            techs: [],
+                "Plataforma de assinaturas de planos de saúde com pagamentos recorrentes via Mercado Pago. Usuários gerenciam assinaturas no portal; admins criam planos e acompanham pagamentos. Código privado; link para produção.",
+            techs: [
+                "Django 5",
+                "DRF",
+                "JWT (SimpleJWT)",
+                "Mercado Pago",
+                "PostgreSQL",
+                "React",
+                "TypeScript",
+                "Vite",
+                "Tailwind CSS",
+                "Docker",
+            ],
             url: "https://www.cartaofonolife.com.br/",
         },
 
